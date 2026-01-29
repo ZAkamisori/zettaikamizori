@@ -1,3 +1,74 @@
+:root{
+  --max: 760px;
+  --pad: 16px;
+  --text: #111;
+  --muted: #666;
+  --bg: #fff;
+  --link: #111;     /* Tumblr側が黒寄りなら合わせる */
+  --linkHover: #c2185b; /* アクセント（ピンク系）にしたい場合 */
+  --border: #e8e8e8;
+}
+
+/* 全体 */
+html{ -webkit-text-size-adjust: 100%; }
+body{
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+}
+
+/* レイアウト（スマホでも読みやすい最大幅） */
+.wrap{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 28px var(--pad) 60px;
+}
+
+/* ヘッダー */
+header{
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 22px;
+}
+.site-title{
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  margin: 0 0 10px;
+}
+nav{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  font-size: 14px;
+}
+nav a{ color: var(--muted); text-decoration: none; }
+nav a:hover{ color: var(--linkHover); text-decoration: underline; }
+
+/* 小説本文（スマホ最適化の核） */
+article{
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif; /* 小説は明朝寄り */
+  font-size: 17px;
+  line-height: 2.0;
+}
+h1{
+  font-size: 22px;
+  margin: 0 0 18px;
+  letter-spacing: 0.01em;
+}
+p{ margin: 0 0 1.2em; }
+a{ color: var(--link); }
+a:hover{ color: var(--linkHover); }
+
+/* 画面が小さいとき少しだけ詰める */
+@media (max-width: 380px){
+  .wrap{ padding-top: 20px; }
+  article{ font-size: 16px; line-height: 1.95; }
+}
+
+
+
+
 <!doctype html>
 <html lang="ja">
 <head>
