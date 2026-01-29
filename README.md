@@ -1,1 +1,1 @@
-# ZAkamizori.github.io
+# zakamizori.github.io
