@@ -176,11 +176,25 @@ article p{ margin: 0 0 1.2em; }
 }
 
 
-/* ---- novel page tweak (1段落前提) ---- */
+/* ===== 小説ページ：可読性最優先 ===== */
 .novel article{
-  max-width: 42em;
+  max-width: 42em;          /* 1行を長くしすぎない */
   margin: 0 auto;
-  line-height: 2.2;
-  text-align: justify;
+  padding: 0 1rem;          /* 画面端の余白 */
+  font-size: 17px;
+  line-height: 2.15;        /* 小説向け */
+  letter-spacing: 0.02em;
+  text-align: left;         /* 日本語はleftが安定 */
+  word-break: break-word;
 }
 
+.novel article h1{
+  margin: 0 0 1.2em;
+  font-size: 22px;
+  letter-spacing: 0.06em;
+}
+
+/* 1段落しかない場合でも崩れない */
+.novel article p{
+  margin: 0;
+}
