@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/style.css">
+  <meta name="robots" content="noindex, nofollow">
+</head>
+
+<body class="novel">
+  <div class="top">
+    <a class="back" href="/index.html">← 作品一覧へ戻る</a>
+  </div>
+
+  <main class="stage">
+    <section class="card">
+      <article>
+        <h1>{{ page.title }}</h1>
+
+        {{ content }}
+
+        <!-- 例：あとがき等を入れるなら -->
+        <!-- <hr> -->
+        <!-- <p class="note">※あとがき：……</p> -->
+      </article>
+    </section>
+
+    <footer class="foot">©絶対安全剃刀</footer>
+  </main>
+</body>
+</html>
