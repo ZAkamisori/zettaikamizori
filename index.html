@@ -5,33 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>小説置き場</title>
   <link rel="stylesheet" href="style.css">
+  <meta name="robots" content="noindex, nofollow">
 </head>
-<body>
+<body class="home">
 
-  <div class="topbar">
-    <div class="wrap">
-      <div class="brand"><a href="index.html">小説置き場</a></div>
-      <div class="note">同人小説の個人サイト</div>
-    </div>
-  </div>
+  <main class="stage">
+    <header class="hero">
+      <h1 class="logo">小説置き場</h1>
+      <p class="tag">同人小説の個人サイト</p>
+    </header>
 
-  <div class="container">
-    <aside class="sidebar">
-      <h2>MENU</h2>
-      <a href="index.html">作品一覧</a>
-      <a href="about.html">注意書き</a>
-      <a href="https://mazekike.tumblr.com/">Tumblr</a>
-    </aside>
+    <nav class="bubbleNav" aria-label="メニュー">
+      <a class="bubble b1" href="#works"><span>作品</span></a>
+      <a class="bubble b2" href="about.html"><span>注意書き</span></a>
+      <a class="bubble b3" href="https://mazekike.tumblr.com/"><span>Tumblr</span></a>
+    </nav>
 
-    <main class="main">
-      <h1>作品一覧</h1>
-      <ul class="list">
+    <section class="card" id="works">
+      <h2>作品一覧</h2>
+      <ul class="works">
         <li><a href="novel1.html">作品タイトルA</a></li>
         <!-- <li><a href="novel2.html">作品タイトルB</a></li> -->
       </ul>
       <p class="note">※ 作品を追加するたびに、ここに1行ずつリンクを増やします。</p>
-    </main>
-  </div>
+    </section>
+
+    <footer class="foot">© yourname</footer>
+  </main>
 
 </body>
 </html>
