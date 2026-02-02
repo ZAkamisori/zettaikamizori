@@ -183,3 +183,9 @@ article p{ margin: 0 0 1.2em; }
   line-height: inherit;
   letter-spacing: inherit;
 }
+
+/* 見出し直下の“謎スペース”だけ消す */
+.works li:first-child{
+  margin-top: 0;
+}
+
