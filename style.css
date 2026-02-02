@@ -125,7 +125,7 @@ a:hover{ color: var(--link-hover); }
 /* 一覧 */
 .works{
   margin: 0;
-  padding-left: 0;
+  padding-left: 18px;
 }
 .works li{ margin: 10px 0; }
 
@@ -173,30 +173,6 @@ article p{ margin: 0 0 1.2em; }
   .logo{ font-size: 30px; }
   .bubble{ width: 96px; height: 96px; }
   article{ font-size: 16px; line-height: 1.95; }
-}
-
-
-/* ===== 小説ページ：可読性最優先 ===== */
-.novel article{
-  max-width: 42em;          /* 1行を長くしすぎない */
-  margin: 0 auto;
-  padding: 0 1rem;          /* 画面端の余白 */
-  font-size: 17px;
-  line-height: 2.15;        /* 小説向け */
-  letter-spacing: 0.02em;
-  text-align: left;         /* 日本語はleftが安定 */
-  word-break: break-word;
-}
-
-.novel article h1{
-  margin: 0 0 1.2em;
-  font-size: 22px;
-  letter-spacing: 0.06em;
-}
-
-/* 1段落しかない場合でも崩れない */
-.novel article p{
-  margin: 0;
 }
 
 /* 本文の改行・空行をそのまま表示する */
