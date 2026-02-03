@@ -205,3 +205,41 @@ article p{ margin: 0 0 1.2em; }
 .works li:first-child{
   margin-top: 0;
 }
+
+/* ===== 装丁ギャラリー ===== */
+.gallery .bookTitle{
+  margin: 0 0 12px;
+  font-size: 16px;
+  letter-spacing: .06em;
+}
+
+.bookGrid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+
+.bookGrid figure{
+  margin: 0;
+}
+
+.bookGrid img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.bookGrid figcaption{
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+@media (max-width: 780px){
+  .bookGrid{ grid-template-columns: 1fr; }
+}
