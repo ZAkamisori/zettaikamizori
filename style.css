@@ -239,3 +239,40 @@ article p{ margin: 0 0 1.2em; }
 .works a{
   margin-left: .6em;
 }
+
+/* ===== 作品一覧：2列で揃える ===== */
+.works{
+  margin: 10px 0 0;
+  padding-left: 0;          /* 黒丸を消す（残したければ戻せる） */
+  list-style: none;
+}
+
+.works li{
+  display: grid;
+  grid-template-columns: 12em 1fr;  /* 左列の幅（ここ調整ポイント） */
+  gap: .8em;
+  align-items: baseline;
+  padding: .25em 0;               /* 行の上下 */
+  line-height: 1.85;              /* 行間 */
+}
+
+.works .meta{
+  color: var(--text-muted);
+  font-size: 13px;
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+
+.works .title{
+  text-decoration-thickness: 1px;
+}
+
+/* スマホでは縦積みにして読みやすく */
+@media (max-width: 520px){
+  .works li{
+    grid-template-columns: 1fr;
+    gap: .15em;
+  }
+  .works .meta{ white-space: normal; }
+}
+
