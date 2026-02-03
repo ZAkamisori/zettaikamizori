@@ -223,3 +223,19 @@ article p{ margin: 0 0 1.2em; }
 @media (min-width: 900px){
   .bookRow figure{ width: 210px; }
 }
+
+/* ===== トップページ：作品一覧の読みやすさ ===== */
+.works{
+  margin: 10px 0 0;          /* 見出しの下に少しだけ余白 */
+  padding-left: 1.2em;       /* 黒丸のインデント（好みで） */
+  line-height: 1.8;          /* 箇条書きの行間 */
+}
+
+.works li{
+  margin: .25em 0;           /* 項目同士の間隔（ここが効く） */
+}
+
+/* 1行内で「ジャンル」と「作品名」が並ぶので、リンクに少し余白を */
+.works a{
+  margin-left: .6em;
+}
