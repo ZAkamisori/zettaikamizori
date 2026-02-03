@@ -206,25 +206,41 @@ article p{ margin: 0 0 1.2em; }
   margin-top: 0;
 }
 
-/* ===== 装丁ギャラリー ===== */
+/* ===== 装丁ギャラリー（縦長・枚数可変・クリック拡大） ===== */
 .gallery .bookTitle{
   margin: 0 0 12px;
   font-size: 16px;
   letter-spacing: .06em;
 }
 
-.bookGrid{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+/* 1冊内：横に流す */
+.bookRow{
+  display: flex;
   gap: 12px;
-  align-items: start;
+  overflow-x: auto;
+  padding: 4px 2px 10px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
-.bookGrid figure{
+/* スクロールバーが気になる場合（任意） */
+.bookRow::-webkit-scrollbar{ height: 10px; }
+.bookRow::-webkit-scrollbar-thumb{
+  background: rgba(120, 80, 100, .18);
+  border-radius: 999px;
+}
+
+/* 1枚のカード */
+.bookRow figure{
   margin: 0;
+  flex: 0 0 auto;
+  width: 180px;              /* 縦長の見栄えが良い幅 */
+  scroll-snap-align: start;
 }
 
-.bookGrid img{
+.bookRow a{ display: block; }
+
+.bookRow img{
   width: 100%;
   height: auto;
   display: block;
@@ -233,13 +249,15 @@ article p{ margin: 0 0 1.2em; }
   box-shadow: var(--shadow);
 }
 
-.bookGrid figcaption{
+/* キャプション */
+.bookRow figcaption{
   margin-top: 8px;
   font-size: 12px;
   color: var(--text-muted);
   text-align: center;
 }
 
-@media (max-width: 780px){
-  .bookGrid{ grid-template-columns: 1fr; }
+/* PCで横幅がある時は少し大きく */
+@media (min-width: 900px){
+  .bookRow figure{ width: 210px; }
 }
