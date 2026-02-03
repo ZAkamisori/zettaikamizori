@@ -168,25 +168,6 @@ article p{ margin: 0 0 1.2em; }
   letter-spacing: inherit;
 }
 
-/* 見出し直下の“謎スペース”だけ消す */
-
-.note{
-  margin: 6px 0 0;
-}
-
-.card h2{
-  margin: 4px 0 4px;
-}
-
-.works{
-  margin: 0;
-  padding-left: 18px;
-}
-
-.works li:first-child{
-  margin-top: 0;
-}
-
 /* ===== 装丁ギャラリー（縦長・枚数可変・クリック拡大） ===== */
 .gallery .bookTitle{
   margin: 0 0 12px;
