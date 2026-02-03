@@ -111,23 +111,7 @@ a:hover{ color: var(--link-hover); }
   padding: 18px 18px 22px;
   box-shadow: var(--shadow);
 }
-.card h2{
-  margin: 0 0 10px;
-  font-size: 16px;
-  letter-spacing: .08em;
-}
-.note{
-  margin: 12px 0 0;
-  color: var(--text-muted);
-  font-size: 13px;
-}
 
-/* 一覧 */
-.works{
-  margin: 0;
-  padding-left: 18px;
-}
-.works li{ margin: 10px 0; }
 
 /* 小説本文：可読性最優先 */
 article{
@@ -185,9 +169,6 @@ article p{ margin: 0 0 1.2em; }
 }
 
 /* 見出し直下の“謎スペース”だけ消す */
-.works li:first-child{
-  margin-top: 0;
-}
 
 .note{
   margin: 6px 0 0;
