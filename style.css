@@ -590,102 +590,10 @@ article p{ margin:0 0 1.2em; }
 }
 
   
-/* ===== TOP：gallery preview 小さめ版 ===== */
+
+/* ===== TOP：gallery preview 最終版 ===== */
 
 .topGallery{
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: repeat(2, 160px);
-  justify-content: center;
-  gap: 18px;
-  margin-top: 8px;
-}
-
-.topBook{
-  display: block;
-  text-decoration: none;
-  color: var(--ink);
-  border: 2px solid var(--navy);
-  border-radius: 20px;
-  background: rgba(255,255,255,.86);
-  padding: 10px;
-  box-shadow: 4px 4px 0 rgba(8,42,77,.12);
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-
-.topBook:hover{
-  transform: translateY(-2px);
-  box-shadow: 6px 6px 0 rgba(8,42,77,.16);
-}
-
-.topBook img{
-  width: 100%;
-  height: 150px;
-  object-fit: contain;
-  object-position: center;
-  display: block;
-  border-radius: 14px;
-  background: var(--cream);
-  border: 1px solid rgba(8,42,77,.16);
-}
-
-.topBook span{
-  display: block;
-  margin-top: 8px;
-  font-size: 12px;
-  font-weight: 950;
-  line-height: 1.4;
-  text-align: center;
-}
-
-.topBook small{
-  display: block;
-  width: max-content;
-  margin: 6px auto 0;
-  padding: 2px 8px;
-  border-radius: 999px;
-  background: var(--pink-pale);
-  border: 1px solid rgba(8,42,77,.16);
-  color: var(--muted);
-  font-size: 10px;
-  font-weight: 850;
-}
-
-.galleryMore{
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  margin-top: 16px;
-}
-
-.galleryMore a{
-  display: inline-block;
-  text-decoration: none;
-  border: 2px solid var(--navy);
-  border-radius: 999px;
-  background: var(--navy);
-  color: #fff;
-  padding: 9px 15px;
-  font-size: 12px;
-  font-weight: 950;
-  box-shadow: 4px 4px 0 rgba(8,42,77,.14);
-}
-
-@media (max-width: 520px){
-  .topGallery{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
-  }
-
-  .topBook img{
-    height: 130px;
-  }
-}
-
-/* ===== TOP：gallery preview 強制小さめ版 ===== */
-
-.home .topGallery{
   position: relative !important;
   z-index: 1 !important;
   display: grid !important;
@@ -695,7 +603,7 @@ article p{ margin:0 0 1.2em; }
   margin-top: 8px !important;
 }
 
-.home .topBook{
+.topBook{
   display: block !important;
   width: 140px !important;
   text-decoration: none !important;
@@ -707,7 +615,7 @@ article p{ margin:0 0 1.2em; }
   box-shadow: 4px 4px 0 rgba(8,42,77,.12) !important;
 }
 
-.home .topBook img{
+.topBook img{
   width: 100% !important;
   height: 125px !important;
   object-fit: contain !important;
@@ -718,7 +626,7 @@ article p{ margin:0 0 1.2em; }
   border: 1px solid rgba(8,42,77,.16) !important;
 }
 
-.home .topBook span{
+.topBook span{
   display: block !important;
   margin-top: 7px !important;
   font-size: 11px !important;
@@ -727,7 +635,7 @@ article p{ margin:0 0 1.2em; }
   text-align: center !important;
 }
 
-.home .topBook small{
+.topBook small{
   display: block !important;
   width: max-content !important;
   margin: 5px auto 0 !important;
@@ -740,14 +648,14 @@ article p{ margin:0 0 1.2em; }
   font-weight: 850 !important;
 }
 
-.home .galleryMore{
+.galleryMore{
   position: relative !important;
   z-index: 1 !important;
   text-align: center !important;
   margin-top: 14px !important;
 }
 
-.home .galleryMore a{
+.galleryMore a{
   display: inline-block !important;
   text-decoration: none !important;
   border: 2px solid var(--navy) !important;
@@ -761,16 +669,16 @@ article p{ margin:0 0 1.2em; }
 }
 
 @media (max-width: 520px){
-  .home .topGallery{
+  .topGallery{
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 10px !important;
   }
 
-  .home .topBook{
+  .topBook{
     width: auto !important;
   }
 
-  .home .topBook img{
+  .topBook img{
     height: 115px !important;
   }
 }
