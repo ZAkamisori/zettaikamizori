@@ -1097,3 +1097,85 @@ article p{ margin:0 0 1.2em; }
   height:30px;
   margin-left:8px;
 }
+
+
+/* ===== common page background motifs ===== */
+
+body{
+  position:relative;
+  overflow-x:hidden;
+}
+
+.pageBgDeco{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+}
+
+.bgMotif{
+  position:absolute;
+  display:block;
+  opacity:.16;
+  filter:drop-shadow(0 8px 18px rgba(7,52,94,.10));
+  transform-origin:center;
+}
+
+.bgMotifHeart{
+  width:120px;
+  right:5%;
+  top:14%;
+  transform:rotate(8deg);
+}
+
+.bgMotifRibbon{
+  width:110px;
+  left:4%;
+  top:42%;
+  transform:rotate(-10deg);
+}
+
+.bgMotifFlower{
+  width:90px;
+  right:8%;
+  bottom:18%;
+  transform:rotate(10deg);
+}
+
+.bgMotifCherry{
+  width:110px;
+  left:6%;
+  bottom:10%;
+  transform:rotate(-6deg);
+}
+
+.top,
+.stage{
+  position:relative;
+  z-index:1;
+}
+
+@media (max-width:760px){
+  .bgMotifHeart{
+    width:78px;
+    right:4%;
+    top:12%;
+  }
+
+  .bgMotifRibbon{
+    width:76px;
+    left:3%;
+    top:38%;
+  }
+
+  .bgMotifFlower{
+    width:64px;
+    right:5%;
+    bottom:20%;
+  }
+
+  .bgMotifCherry{
+    display:none;
+  }
+}
+
