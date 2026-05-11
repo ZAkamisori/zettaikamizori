@@ -941,3 +941,33 @@ article p{ margin:0 0 1.2em; }
   margin-left:6px;
   transform:translateY(-2px);
 }
+
+/* ===== mobile menu card decoration ===== */
+
+@media (max-width:760px){
+  .menuCard{
+    position:relative;
+    overflow:hidden;
+  }
+
+  .menuCard::after{
+    content:"";
+    position:absolute;
+    right:18px;
+    top:16px;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:rgba(255,255,255,.45);
+    border:1px solid rgba(8,42,77,.18);
+  }
+
+  .menuCard:nth-child(2)::after{
+    background:rgba(232,90,149,.25);
+  }
+
+  .menuCard:nth-child(3)::after{
+    background:rgba(255,240,246,.35);
+  }
+}
+
