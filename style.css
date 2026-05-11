@@ -1080,3 +1080,21 @@ article p{ margin:0 0 1.2em; }
     display:none !important;
   }
 }
+
+/* ===== lower page logo ===== */
+
+.pageLogo{
+  text-align:center;
+  margin:0 0 18px;
+}
+
+.pageLogo img{
+  width:min(260px, 70%);
+  height:auto;
+}
+
+.pageTitle .titleMotif{
+  width:30px;
+  height:30px;
+  margin-left:8px;
+}
