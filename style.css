@@ -828,3 +828,15 @@ article p{ margin:0 0 1.2em; }
     bottom:8%;
   }
 }
+
+
+/* ===== section title motifs ===== */
+
+.titleMotif{
+  width:26px;
+  height:26px;
+  object-fit:contain;
+  vertical-align:middle;
+  margin-left:6px;
+  transform:translateY(-2px);
+}
