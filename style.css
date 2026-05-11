@@ -724,7 +724,7 @@ article p{ margin:0 0 1.2em; }
 }
 
 
-/* ===== TOP decorative motifs：整理版 ===== */
+/* ===== TOP decorative motifs：背景円なし版 ===== */
 
 .heroInner{
   position:relative;
@@ -741,26 +741,28 @@ article p{ margin:0 0 1.2em; }
   filter:drop-shadow(3px 4px 0 rgba(8,42,77,.16));
 }
 
-/* PC：背景装飾として控えめに配置 */
+/* PC：リボンはロゴ左下、タグの左側へ */
 .heroMotifRibbon{
   width:120px;
-  left:6%;
-  bottom:12%;
+  left:7%;
+  bottom:18%;
   transform:rotate(-10deg);
 }
 
+/* PC：キャンディ／ハートはロゴ右上へ */
 .heroMotifHeart{
   width:82px;
-  left:43%;
-  top:18%;
+  left:46%;
+  top:14%;
   transform:rotate(12deg);
 }
 
+/* PC：サクランボはタグ右下へ */
 .heroMotifCherry{
-  width:110px;
-  left:44%;
-  bottom:13%;
-  transform:rotate(8deg);
+  width:108px;
+  left:45%;
+  bottom:12%;
+  transform:rotate(7deg);
 }
 
 /* 追加モチーフ：PCでは非表示 */
@@ -768,7 +770,6 @@ article p{ margin:0 0 1.2em; }
 .heroMotifFlower2{
   display:none;
 }
-
 
 /* ===== section title motifs ===== */
 
