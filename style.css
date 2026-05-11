@@ -682,3 +682,17 @@ article p{ margin:0 0 1.2em; }
     height: 115px !important;
   }
 }
+
+/* ===== TOP menu image icons ===== */
+
+.menuIcon{
+  display:block;
+  width:54px;
+  height:54px;
+  object-fit:contain;
+  margin:0 auto 8px;
+}
+
+.menuCard{
+  gap:4px;
+}
