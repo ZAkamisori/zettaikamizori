@@ -587,6 +587,8 @@ article p{ margin:0 0 1.2em; }
   .menuGrid{ grid-template-columns:1fr; }
   .logo{ font-size:42px; }
   article,.novelText{ font-size:16px; line-height:1.95; }
+}
+
   
 /* ===== TOP：gallery preview 小さめ版 ===== */
 
