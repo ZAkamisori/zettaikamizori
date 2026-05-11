@@ -772,3 +772,59 @@ article p{ margin:0 0 1.2em; }
   height: auto;
   margin: 0 auto;
 }
+
+
+/* ===== TOP decorative motifs：配置調整 ===== */
+
+.heroInner{
+  z-index: 2;
+}
+
+.heroMotif{
+  position:absolute;
+  z-index:1;
+  pointer-events:none;
+  user-select:none;
+}
+
+.heroMotifRibbon{
+  width:78px;
+  left:7%;
+  bottom:12%;
+  transform:rotate(-10deg);
+}
+
+.heroMotifHeart{
+  width:46px;
+  right:7%;
+  top:16%;
+  transform:rotate(12deg);
+}
+
+.heroMotifCherry{
+  width:72px;
+  right:12%;
+  bottom:14%;
+  transform:rotate(8deg);
+  opacity:.95;
+}
+
+@media (max-width:760px){
+  .heroMotifRibbon{
+    width:58px;
+    left:5%;
+    bottom:8%;
+  }
+
+  .heroMotifHeart{
+    width:36px;
+    right:7%;
+    top:12%;
+  }
+
+  .heroMotifCherry{
+    width:54px;
+    right:8%;
+    bottom:8%;
+  }
+}
