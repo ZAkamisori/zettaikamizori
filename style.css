@@ -768,7 +768,7 @@ article p{ margin:0 0 1.2em; }
 
 .siteLogo{
   display: block;
-  width: min(560px, 92%);
+  width: min(500px, 90%);
   height: auto;
   margin: 0 auto;
 }
