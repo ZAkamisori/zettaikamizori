@@ -714,9 +714,8 @@ article p{ margin:0 0 1.2em; }
   max-height:54px !important;
   object-fit:contain !important;
   flex:0 0 auto !important;
-  margin:0 auto -4px !important;
+  margin:0 auto 2px !important;
 }
-
 
 /* ===== main logo image ===== */
 
