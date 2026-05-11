@@ -822,14 +822,15 @@ article p{ margin:0 0 1.2em; }
     transform:rotate(12deg);
   }
 
-  .heroMotifCherry{
-    width:76px;
-    right:8%;
-    left:auto;
-    top:40%;
-    bottom:auto;
-    transform:rotate(8deg);
-  }
+/* サクランボ：ABOUTとNOVELSの間の右下へ */
+.heroMotifCherry{
+  width:68px;
+  right:7%;
+  top:50%;
+  bottom:auto;
+  left:auto;
+  transform:rotate(8deg);
+}
 
   .heroMotifFlower{
     display:block;
@@ -848,22 +849,23 @@ article p{ margin:0 0 1.2em; }
     box-shadow:4px 4px 0 rgba(8,42,77,.16);
   }
 
-  .heroMotifFlower2{
-    display:block;
-    position:absolute;
-    z-index:4;
-    width:66px;
-    right:10%;
-    top:55%;
-    transform:rotate(9deg);
-    pointer-events:none;
-    user-select:none;
-    background:rgba(255,255,255,.72);
-    border:2px solid var(--navy);
-    border-radius:18px;
-    padding:6px;
-    box-shadow:4px 4px 0 rgba(8,42,77,.16);
-  }
+/* フラワー②：NOVELSカード下寄りへ */
+.heroMotifFlower2{
+  display:block;
+  position:absolute;
+  z-index:4;
+  width:58px;
+  right:8%;
+  top:64%;
+  transform:rotate(9deg);
+  pointer-events:none;
+  user-select:none;
+  background:rgba(255,255,255,.72);
+  border:2px solid var(--navy);
+  border-radius:18px;
+  padding:6px;
+  box-shadow:4px 4px 0 rgba(8,42,77,.16);
+}
 
   .menuCard{
     position:relative;
