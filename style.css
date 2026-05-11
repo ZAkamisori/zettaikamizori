@@ -67,9 +67,7 @@ a:hover{ color:var(--pink-strong); }
   border:2px solid var(--navy);
   border-radius:34px;
   background:
-    radial-gradient(circle at 18% 22%, rgba(232,90,149,.45) 0 9%, transparent 9.5%),
-    radial-gradient(circle at 82% 24%, rgba(8,42,77,.18) 0 8%, transparent 8.5%),
-    radial-gradient(circle at 57% 96%, rgba(255,255,255,.92) 0 19%, transparent 19.5%),
+    radial-gradient(circle at 57% 96%, rgba(255,255,255,.80) 0 18%, transparent 18.5%),
     linear-gradient(180deg,#FAD9E7 0%, #FFF8EF 82%);
   box-shadow:var(--shadow);
   padding:34px 22px 30px;
