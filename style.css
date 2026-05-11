@@ -806,68 +806,42 @@ article p{ margin:0 0 1.2em; }
     filter:none;
   }
 
-  /* 花1：ロゴ左下 */
+  /* 花：ロゴ左下 */
   .heroMotifFlower{
     display:block;
     position:absolute;
-    z-index:4;
     width:54px;
     left:10%;
     top:31%;
     transform:rotate(-8deg);
-    pointer-events:none;
-    user-select:none;
-    background:rgba(255,255,255,.72);
-    border:2px solid var(--navy);
-    border-radius:18px;
-    padding:6px;
-    box-shadow:4px 4px 0 rgba(8,42,77,.16);
   }
 
-  /* ハート：ロゴ右下寄り */
+  /* ハート：ロゴ右下 */
   .heroMotifHeart{
-    width:60px;
+    display:block;
+    position:absolute;
+    width:58px;
     right:10%;
-    left:auto;
     top:31%;
+    left:auto;
     transform:rotate(10deg);
   }
 
-  /* リボン：ABOUT左上角に軽くかかる程度 */
+  /* リボン：タグ左下 */
   .heroMotifRibbon{
-    width:74px;
-    left:8%;
-    top:49%;
-    bottom:auto;
-    transform:rotate(-9deg);
-  }
-
-  /* サクランボ：NOVELS右下寄り */
-  .heroMotifCherry{
-    width:62px;
-    right:7%;
-    top:63.5%;
-    bottom:auto;
-    left:auto;
-    transform:rotate(8deg);
-  }
-
-  /* フラワー②：GALLERY右上端に寄せる */
-  .heroMotifFlower2{
     display:block;
     position:absolute;
-    z-index:4;
-    width:54px;
-    right:7%;
-    top:77.5%;
-    transform:rotate(8deg);
-    pointer-events:none;
-    user-select:none;
-    background:rgba(255,255,255,.72);
-    border:2px solid var(--navy);
-    border-radius:18px;
-    padding:6px;
-    box-shadow:4px 4px 0 rgba(8,42,77,.16);
+    width:66px;
+    left:12%;
+    top:43%;
+    bottom:auto;
+    transform:rotate(-8deg);
+  }
+
+  /* 使わない素材は非表示 */
+  .heroMotifCherry,
+  .heroMotifFlower2{
+    display:none;
   }
 
   .menuCard{
