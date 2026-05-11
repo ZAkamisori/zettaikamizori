@@ -806,39 +806,14 @@ article p{ margin:0 0 1.2em; }
     filter:none;
   }
 
-  .heroMotifRibbon{
-    width:82px;
-    left:8%;
-    top:33%;
-    bottom:auto;
-    transform:rotate(-10deg);
-  }
-
-  .heroMotifHeart{
-    width:68px;
-    right:9%;
-    left:auto;
-    top:16%;
-    transform:rotate(12deg);
-  }
-
-/* サクランボ：ABOUTとNOVELSの間の右下へ */
-.heroMotifCherry{
-  width:68px;
-  right:7%;
-  top:50%;
-  bottom:auto;
-  left:auto;
-  transform:rotate(8deg);
-}
-
+  /* 花1：ロゴ左下 */
   .heroMotifFlower{
     display:block;
     position:absolute;
     z-index:4;
-    width:62px;
+    width:54px;
     left:10%;
-    top:18%;
+    top:31%;
     transform:rotate(-8deg);
     pointer-events:none;
     user-select:none;
@@ -849,23 +824,51 @@ article p{ margin:0 0 1.2em; }
     box-shadow:4px 4px 0 rgba(8,42,77,.16);
   }
 
-/* フラワー②：NOVELSカード下寄りへ */
-.heroMotifFlower2{
-  display:block;
-  position:absolute;
-  z-index:4;
-  width:58px;
-  right:8%;
-  top:64%;
-  transform:rotate(9deg);
-  pointer-events:none;
-  user-select:none;
-  background:rgba(255,255,255,.72);
-  border:2px solid var(--navy);
-  border-radius:18px;
-  padding:6px;
-  box-shadow:4px 4px 0 rgba(8,42,77,.16);
-}
+  /* ハート：ロゴ右下寄り */
+  .heroMotifHeart{
+    width:60px;
+    right:10%;
+    left:auto;
+    top:31%;
+    transform:rotate(10deg);
+  }
+
+  /* リボン：ABOUT左上角に軽くかかる程度 */
+  .heroMotifRibbon{
+    width:74px;
+    left:8%;
+    top:49%;
+    bottom:auto;
+    transform:rotate(-9deg);
+  }
+
+  /* サクランボ：NOVELS右下寄り */
+  .heroMotifCherry{
+    width:62px;
+    right:7%;
+    top:63.5%;
+    bottom:auto;
+    left:auto;
+    transform:rotate(8deg);
+  }
+
+  /* フラワー②：GALLERY右上端に寄せる */
+  .heroMotifFlower2{
+    display:block;
+    position:absolute;
+    z-index:4;
+    width:54px;
+    right:7%;
+    top:77.5%;
+    transform:rotate(8deg);
+    pointer-events:none;
+    user-select:none;
+    background:rgba(255,255,255,.72);
+    border:2px solid var(--navy);
+    border-radius:18px;
+    padding:6px;
+    box-shadow:4px 4px 0 rgba(8,42,77,.16);
+  }
 
   .menuCard{
     position:relative;
