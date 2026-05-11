@@ -696,3 +696,53 @@ article p{ margin:0 0 1.2em; }
 .menuCard{
   gap:4px;
 }
+
+/* ===== TOP decorative motifs ===== */
+
+.heroMotif{
+  position:absolute;
+  z-index:1;
+  pointer-events:none;
+  user-select:none;
+}
+
+.heroMotifRibbon{
+  width:88px;
+  left:7%;
+  bottom:12%;
+  transform:rotate(-10deg);
+}
+
+.heroMotifHeart{
+  width:56px;
+  right:8%;
+  top:18%;
+  transform:rotate(12deg);
+}
+
+.heroMotifCherry{
+  width:82px;
+  right:12%;
+  bottom:13%;
+  transform:rotate(8deg);
+}
+
+@media (max-width:760px){
+  .heroMotifRibbon{
+    width:66px;
+    left:5%;
+    bottom:8%;
+  }
+
+  .heroMotifHeart{
+    width:42px;
+    right:7%;
+    top:14%;
+  }
+
+  .heroMotifCherry{
+    width:62px;
+    right:8%;
+    bottom:8%;
+  }
+}
