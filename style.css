@@ -1013,3 +1013,70 @@ article p{ margin:0 0 1.2em; }
 .genreCard:nth-child(4n){
   background:#FFF8D8;
 }
+
+
+/* ===== mobile hero motifs：ロゴ周辺集中版 ===== */
+
+@media (max-width:760px){
+
+  /* スマホではヒーロー上部を少しコンパクトにする */
+  .homeHero{
+    padding-top:44px;
+  }
+
+  .heroInner{
+    z-index:3;
+  }
+
+  .heroMotif{
+    z-index:4;
+    background:rgba(255,255,255,.72);
+    border:2px solid var(--navy);
+    border-radius:18px;
+    padding:6px;
+    box-shadow:4px 4px 0 rgba(7,52,94,.16);
+    filter:none;
+  }
+
+  /* 花：ロゴ左下、ABOUTカードには乗せない */
+  .heroMotifFlower{
+    display:block !important;
+    position:absolute !important;
+    width:50px !important;
+    left:9% !important;
+    top:23% !important;
+    bottom:auto !important;
+    right:auto !important;
+    transform:rotate(-8deg) !important;
+  }
+
+  /* キャンディ／ハート：ロゴ右下 */
+  .heroMotifHeart{
+    display:block !important;
+    position:absolute !important;
+    width:52px !important;
+    right:10% !important;
+    top:23% !important;
+    left:auto !important;
+    bottom:auto !important;
+    transform:rotate(8deg) !important;
+  }
+
+  /* リボン：fanfiction archive 左下 */
+  .heroMotifRibbon{
+    display:block !important;
+    position:absolute !important;
+    width:58px !important;
+    left:12% !important;
+    top:34% !important;
+    right:auto !important;
+    bottom:auto !important;
+    transform:rotate(-8deg) !important;
+  }
+
+  /* スマホではチェリーと花2は非表示 */
+  .heroMotifCherry,
+  .heroMotifFlower2{
+    display:none !important;
+  }
+}
