@@ -1,278 +1,590 @@
 :root{
-  /* 空気（背景） */
-  --bg-main: #f6dbe6;
-
-  /* 紙（カード） */
-  --paper: #ffffff;
-  --paper-soft: #fff6fa;
-
-  /* 文字（紫寄りの黒） */
-  --text-main: #24161f;
-  --text-muted: #6a5a63;
-
-  /* 枠・影（ローズグレー） */
-  --border: rgba(120, 80, 100, .18);
-  --shadow: 0 18px 36px rgba(120, 40, 80, .12);
-
-  /* リンク（控えめマゼンタ） */
-  --link: #8f2f5b;
-  --link-hover: #c2185b;
-
-  /* レイアウト */
-  --max: 900px;
-  --pad: 18px;
-  --r: 16px;
+  --pink-main:#E85A95;
+  --pink-strong:#D94386;
+  --pink-soft:#F7CFE0;
+  --pink-pale:#FFF0F6;
+  --navy:#082A4D;
+  --navy-soft:#203B63;
+  --navy-faint:rgba(8,42,77,.12);
+  --cream:#FFF8EF;
+  --paper:#FFFFFF;
+  --ink:#16263A;
+  --muted:#657080;
+  --line:rgba(8,42,77,.18);
+  --shadow:7px 7px 0 rgba(8,42,77,.16);
+  --soft-shadow:0 18px 36px rgba(8,42,77,.12);
+  --max:1080px;
+  --pad:18px;
+  --r:26px;
 }
 
-/* ベース */
-html{ -webkit-text-size-adjust: 100%; }
+*{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
 body{
-  margin: 0;
-  color: var(--text-main);
-  font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;
-
+  margin:0;
+  color:var(--ink);
+  font-family:system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;
   background:
-    radial-gradient(1200px 600px at 20% -10%, rgba(255,255,255,.55), transparent 60%),
-    radial-gradient(800px 500px at 90% 0%, rgba(255,255,255,.35), transparent 55%),
-    linear-gradient(180deg, var(--bg-main), #fdeaf2 50%, #ffffff 130%);
+    radial-gradient(circle at 9% 8%, rgba(255,255,255,.95), transparent 20%),
+    radial-gradient(circle at 90% 4%, rgba(232,90,149,.23), transparent 17%),
+    radial-gradient(circle at 77% 82%, rgba(8,42,77,.10), transparent 20%),
+    linear-gradient(135deg,var(--cream),var(--pink-pale) 48%,var(--pink-soft));
 }
+a{ color:var(--navy); text-underline-offset:3px; }
+a:hover{ color:var(--pink-strong); }
 
-a{ color: var(--link); }
-a:hover{ color: var(--link-hover); }
-
-/* 全体幅 */
 .stage{
-  max-width: var(--max);
-  margin: 28px auto 64px;
-  padding: 0 var(--pad);
+  max-width:var(--max);
+  margin:0 auto;
+  padding:28px var(--pad) 64px;
 }
+.narrow{ max-width:880px; }
 
-/* トップ */
-.hero{
-  text-align: center;
-  margin: 10px 0 14px;
-}
-.hero-visual{
-  display: block;
-  margin: 10px auto 10px;
-  max-width: 420px;
-  width: 100%;
-  height: auto;
-}
-.logo{
-  margin: 0;
-  font-size: 34px;
-  letter-spacing: .08em;
-  font-weight: 900;
-}
-.tag{
-  margin: 8px 0 0;
-  color: var(--text-muted);
-  font-size: 13px;
-  letter-spacing: .04em;
-}
-
-/* 丸ボタン：画像が主役 */
-.bubbleNav{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin: 16px 0 22px;
-}
-.bubble{
-  width: 112px;
-  height: 112px;
-  border-radius: 999px;
-  display: grid;
-  place-items: center;
-  background: transparent;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-  transition: transform .25s, box-shadow .25s;
-}
-.bubble img{
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 999px;
-  display: block;
-}
-.bubble:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 26px 50px rgba(120,40,80,.18);
-}
-
-/* 白カード（一覧・本文） */
-.card{
-  background: var(--paper);
-  border: 1px solid var(--border);
-  border-radius: var(--r);
-  padding: 18px 18px 22px;
-  box-shadow: var(--shadow);
-}
-
-
-/* 小説本文：可読性最優先 */
-article{
-  max-width: 46em;
-  margin: 0 auto;
-  font-family: "Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif;
-  font-size: 17px;
-  line-height: 2.0;
-  letter-spacing: .02em;
-}
-article h1{
-  margin: 0 0 18px;
-  font-size: 22px;
-  letter-spacing: .06em;
-}
-article p{ margin: 0 0 1.2em; }
-
-/* 戻るボタン（本文ページ用） */
+/* 共通：上部リンク */
 .top{
-  max-width: var(--max);
-  margin: 18px auto 0;
-  padding: 0 var(--pad);
+  max-width:var(--max);
+  margin:18px auto 0;
+  padding:0 var(--pad);
 }
 .back{
-  display: inline-block;
-  text-decoration: none;
-  background: rgba(255,255,255,.75);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 10px 14px;
+  display:inline-block;
+  text-decoration:none;
+  color:var(--ink);
+  background:rgba(255,255,255,.86);
+  border:2px solid var(--navy);
+  border-radius:999px;
+  padding:10px 14px;
+  font-size:13px;
+  font-weight:850;
+  box-shadow:3px 3px 0 rgba(8,42,77,.14);
 }
 
-/* フッター */
-.foot{
-  text-align: center;
-  color: rgba(36,22,31,.35);
-  font-size: 12px;
-  margin-top: 16px;
+/* TOP */
+.homeHero{
+  position:relative;
+  overflow:hidden;
+  min-height:390px;
+  border:2px solid var(--navy);
+  border-radius:34px;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(232,90,149,.45) 0 9%, transparent 9.5%),
+    radial-gradient(circle at 82% 24%, rgba(8,42,77,.18) 0 8%, transparent 8.5%),
+    radial-gradient(circle at 57% 96%, rgba(255,255,255,.92) 0 19%, transparent 19.5%),
+    linear-gradient(180deg,#FAD9E7 0%, #FFF8EF 82%);
+  box-shadow:var(--shadow);
+  padding:34px 22px 30px;
+}
+.homeHero::before{
+  content:"RAZOR ARCHIVE";
+  position:absolute;
+  left:22px;
+  top:28px;
+  z-index:2;
+  border:2px solid var(--navy);
+  border-radius:999px;
+  background:var(--cream);
+  padding:5px 11px;
+  font-size:11px;
+  font-weight:950;
+  letter-spacing:.08em;
+  transform:rotate(-10deg);
+  box-shadow:3px 3px 0 rgba(8,42,77,.12);
+}
+.homeHero::after{
+  content:"✦";
+  position:absolute;
+  right:32px;
+  top:22px;
+  color:var(--pink-strong);
+  font-size:54px;
+  text-shadow:3px 3px 0 rgba(255,255,255,.82);
+  transform:rotate(8deg);
+}
+.dotField{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.34;
+  background-image:radial-gradient(var(--pink-strong) 1px, transparent 1px);
+  background-size:12px 12px;
+  mask-image:linear-gradient(90deg,black 0 34%,transparent 62%);
+}
+.heroInner{
+  position:relative;
+  z-index:1;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:24px;
+  align-items:center;
+  min-height:310px;
+}
+.logoBlock{ text-align:center; }
+.logo{
+  margin:24px 0 10px;
+  color:var(--cream);
+  -webkit-text-stroke:2px var(--navy);
+  font-size:clamp(44px,8vw,88px);
+  line-height:.95;
+  letter-spacing:.06em;
+  font-weight:950;
+  text-shadow:5px 5px 0 var(--navy),9px 9px 0 rgba(8,42,77,.10);
+  transform:rotate(-2deg);
+}
+.tag{
+  display:inline-block;
+  margin:0;
+  padding:7px 18px 8px;
+  border-radius:999px;
+  background:var(--pink-pale);
+  border:1.5px solid var(--line);
+  color:var(--navy);
+  font-size:14px;
+  font-weight:950;
+  letter-spacing:.14em;
+}
+.menuGrid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(130px,1fr));
+  gap:14px;
+}
+.menuCard{
+  min-height:118px;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  text-decoration:none;
+  border:2px solid var(--navy);
+  border-radius:23px;
+  background:rgba(255,255,255,.82);
+  box-shadow:5px 5px 0 rgba(8,42,77,.14);
+  color:var(--navy);
+  font-weight:950;
+  letter-spacing:.05em;
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.menuCard:hover{
+  transform:translateY(-3px);
+  box-shadow:7px 7px 0 rgba(8,42,77,.18);
+}
+.menuCard .icon{
+  display:block;
+  margin:0 auto 8px;
+  font-size:28px;
+  line-height:1;
+}
+.menuCard:nth-child(1), .menuCard:nth-child(4){ background:var(--pink-main); color:white; }
+.menuCard:nth-child(2){ background:var(--pink-pale); }
+.menuCard:nth-child(3){ background:var(--navy); color:white; }
+
+/* 共通セクション */
+.section{
+  position:relative;
+  margin-top:26px;
+  border:2px solid var(--navy);
+  border-radius:30px;
+  background:rgba(255,255,255,.76);
+  box-shadow:var(--shadow);
+  padding:20px;
+  overflow:hidden;
+}
+.section::after{
+  content:"";
+  position:absolute;
+  right:-36px;
+  top:-36px;
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  background:rgba(232,90,149,.16);
+  border:1px solid var(--line);
+  pointer-events:none;
+}
+.sectionHead{
+  position:relative;
+  z-index:1;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:16px;
+  margin-bottom:16px;
+  padding-bottom:12px;
+  border-bottom:2px dashed var(--line);
+}
+h1.pageTitle,
+h2.sectionTitle{
+  display:inline-block;
+  margin:0;
+  border:2px solid var(--navy);
+  border-radius:999px;
+  background:var(--paper);
+  padding:7px 15px 8px;
+  color:var(--navy);
+  font-size:22px;
+  line-height:1.1;
+  letter-spacing:.06em;
+  font-weight:950;
+  box-shadow:4px 4px 0 rgba(232,90,149,.32);
+}
+.caption{
+  margin:0;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.65;
+  font-weight:750;
 }
 
-/* スマホ調整 */
-@media (max-width: 380px){
-  .logo{ font-size: 30px; }
-  .bubble{ width: 96px; height: 96px; }
-  article{ font-size: 16px; line-height: 1.95; }
+/* HOME panels */
+.aboutLead{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:18px;
+  align-items:center;
 }
-
-/* 本文の改行・空行をそのまま表示する */
-.novelText{
-  white-space: pre-wrap;     /* 改行と空白を保持して折り返す */
-  font-family: inherit;      /* 既存のarticleの書体を使う */
-  font-size: inherit;
-  line-height: inherit;
-  letter-spacing: inherit;
+.leadText{
+  margin:0;
+  color:var(--ink);
+  font-size:14px;
+  line-height:1.9;
+  font-weight:700;
 }
-
-/* ===== 装丁ギャラリー（縦長・枚数可変・クリック拡大） ===== */
-.gallery .bookTitle{
-  margin: 0 0 12px;
-  font-size: 16px;
-  letter-spacing: .06em;
+.roundMark{
+  width:132px;
+  height:132px;
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 38% 42%, var(--cream) 0 21%, transparent 22%),
+    conic-gradient(var(--pink-main),var(--pink-soft),var(--navy),var(--pink-main));
+  box-shadow:var(--soft-shadow);
 }
-
-/* 1冊内：横に流す */
-.bookRow{
-  display: flex;
-  gap: 12px;
-  overflow-x: auto;
-  padding: 4px 2px 10px;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
+.homeLinkRow{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:14px;
 }
-
-/* スクロールバーが気になる場合（任意） */
-.bookRow::-webkit-scrollbar{ height: 10px; }
-.bookRow::-webkit-scrollbar-thumb{
-  background: rgba(120, 80, 100, .18);
-  border-radius: 999px;
+.button{
+  display:inline-block;
+  text-decoration:none;
+  border:2px solid var(--navy);
+  border-radius:999px;
+  padding:9px 14px;
+  background:var(--paper);
+  color:var(--navy);
+  font-size:13px;
+  font-weight:950;
+  box-shadow:3px 3px 0 rgba(8,42,77,.14);
 }
+.button.primary{ background:var(--navy); color:white; }
+.button.pink{ background:var(--pink-main); color:white; }
 
-/* 1枚のカード */
-.bookRow figure{
-  margin: 0;
-  flex: 0 0 auto;
-  width: 180px;              /* 縦長の見栄えが良い幅 */
-  scroll-snap-align: start;
+/* genre list */
+.genreNav{
+  position:relative;
+  z-index:1;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:0 0 18px;
 }
-
-.bookRow a{ display: block; }
-
-.bookRow img{
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
+.genreNav a{
+  text-decoration:none;
+  border:1.5px solid var(--navy);
+  border-radius:999px;
+  background:var(--paper);
+  padding:7px 11px;
+  color:var(--navy);
+  font-size:12px;
+  font-weight:950;
+  box-shadow:2px 2px 0 rgba(8,42,77,.12);
 }
-
-/* キャプション */
-.bookRow figcaption{
-  margin-top: 8px;
-  font-size: 12px;
-  color: var(--text-muted);
-  text-align: center;
+.genreNav a:nth-child(odd){ background:var(--pink-pale); }
+.genreNav a:nth-child(3n){ background:var(--navy); color:white; }
+.genreGrid{
+  position:relative;
+  z-index:1;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
 }
-
-/* PCで横幅がある時は少し大きく */
-@media (min-width: 900px){
-  .bookRow figure{ width: 210px; }
+.genreCard{
+  position:relative;
+  overflow:hidden;
+  border:2px solid var(--navy);
+  border-radius:24px;
+  background:var(--cream);
+  padding:16px 14px 14px;
+  box-shadow:5px 5px 0 rgba(8,42,77,.12);
 }
-
-/* ===== トップページ：作品一覧の読みやすさ ===== */
+.genreCard:nth-child(even){ background:#FFF1F6; }
+.genreCard::after{
+  content:"";
+  position:absolute;
+  right:-18px;
+  top:-18px;
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  background:rgba(232,90,149,.22);
+  border:1px solid var(--line);
+}
+.genreTitle{
+  position:relative;
+  z-index:1;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+  margin:0 0 10px;
+  color:var(--navy);
+  font-size:17px;
+  letter-spacing:.04em;
+  font-weight:950;
+}
+.genreTitle span{
+  flex:0 0 auto;
+  border:1.5px solid var(--line);
+  border-radius:999px;
+  background:rgba(255,255,255,.86);
+  padding:3px 8px;
+  color:var(--pink-strong);
+  font-size:11px;
+  white-space:nowrap;
+}
 .works{
-  margin: 10px 0 0;          /* 見出しの下に少しだけ余白 */
-  padding-left: 1.2em;       /* 黒丸のインデント（好みで） */
-  line-height: 1.8;          /* 箇条書きの行間 */
+  position:relative;
+  z-index:1;
+  display:grid;
+  gap:8px;
+  margin:0;
+  padding:0;
+  list-style:none;
 }
-
 .works li{
-  margin: .25em 0;           /* 項目同士の間隔（ここが効く） */
+  display:grid;
+  grid-template-columns:42px 1fr;
+  gap:10px;
+  align-items:baseline;
+  padding:9px 10px;
+  border:1px solid rgba(8,42,77,.14);
+  border-radius:15px;
+  background:rgba(255,255,255,.78);
 }
-
-/* 1行内で「ジャンル」と「作品名」が並ぶので、リンクに少し余白を */
-.works a{
-  margin-left: .6em;
+.num{
+  color:var(--pink-strong);
+  font-size:11px;
+  font-weight:950;
 }
-
-/* ===== 作品一覧：2列で揃える ===== */
-.works{
-  margin: 10px 0 0;
-  padding-left: 0;          /* 黒丸を消す（残したければ戻せる） */
-  list-style: none;
-}
-
-.works li{
-  display: grid;
-  grid-template-columns: 12em 1fr;  /* 左列の幅（ここ調整ポイント） */
-  gap: .8em;
-  align-items: baseline;
-  padding: .25em 0;               /* 行の上下 */
-  line-height: 1.85;              /* 行間 */
-}
-
-.works .meta{
-  color: var(--text-muted);
-  font-size: 13px;
-  letter-spacing: .02em;
-  white-space: nowrap;
-}
-
 .works .title{
-  text-decoration-thickness: 1px;
+  color:var(--navy);
+  font-weight:950;
+  font-size:14px;
+  line-height:1.45;
+  text-decoration-thickness:1px;
+}
+.works .meta{
+  display:block;
+  margin-top:2px;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.45;
+  font-weight:750;
 }
 
-/* スマホでは縦積みにして読みやすく */
-@media (max-width: 520px){
-  .works li{
-    grid-template-columns: 1fr;
-    gap: .15em;
-  }
-  .works .meta{ white-space: normal; }
+/* about */
+.infoGrid{
+  position:relative;
+  z-index:1;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:16px;
+}
+.noteCard{
+  border:2px solid var(--navy);
+  border-radius:24px;
+  background:rgba(255,255,255,.86);
+  padding:18px;
+  box-shadow:5px 5px 0 rgba(8,42,77,.12);
+}
+.noteCard h2,.noteCard h3{
+  margin:0 0 10px;
+  color:var(--navy);
+  font-size:18px;
+  letter-spacing:.06em;
+}
+.noteCard p{
+  margin:0 0 1em;
+  color:var(--ink);
+  font-size:14px;
+  line-height:1.9;
+}
+.noteCard p:last-child{ margin-bottom:0; }
+
+/* gallery */
+.bookSection{
+  position:relative;
+  z-index:1;
+  margin-top:16px;
+  border:2px solid var(--navy);
+  border-radius:26px;
+  background:rgba(255,255,255,.80);
+  padding:16px;
+  box-shadow:5px 5px 0 rgba(8,42,77,.12);
+}
+.bookTitle{
+  display:inline-block;
+  margin:0 0 12px;
+  border:2px solid var(--navy);
+  border-radius:999px;
+  background:var(--pink-main);
+  color:white;
+  padding:6px 13px;
+  font-size:16px;
+  letter-spacing:.06em;
+  font-weight:950;
+}
+.bookRow{
+  display:flex;
+  gap:14px;
+  overflow-x:auto;
+  padding:4px 2px 12px;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+}
+.bookRow::-webkit-scrollbar{ height:10px; }
+.bookRow::-webkit-scrollbar-thumb{ background:rgba(8,42,77,.22); border-radius:999px; }
+.bookRow figure{
+  flex:0 0 auto;
+  width:182px;
+  margin:0;
+  scroll-snap-align:start;
+}
+.bookRow a{ display:block; }
+.bookRow img{
+  display:block;
+  width:100%;
+  height:auto;
+  border:2px solid var(--navy);
+  border-radius:15px;
+  background:var(--cream);
+  box-shadow:5px 5px 0 rgba(8,42,77,.14);
+}
+.bookRow figcaption{
+  display:inline-block;
+  margin:9px auto 0;
+  padding:4px 10px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:var(--pink-pale);
+  color:var(--navy);
+  font-size:12px;
+  font-weight:850;
+  text-align:center;
 }
 
+/* novel page */
+.novelPage .stage{ max-width:900px; }
+.novelCard{
+  border:2px solid var(--navy);
+  border-radius:30px;
+  background:rgba(255,255,255,.88);
+  box-shadow:var(--shadow);
+  padding:22px clamp(18px,4vw,44px) 34px;
+}
+.novelHeader{
+  margin:0 0 22px;
+  padding-bottom:14px;
+  border-bottom:2px dashed var(--line);
+}
+.novelHeader h1{
+  margin:0 0 10px;
+  color:var(--navy);
+  font-size:clamp(24px,4vw,38px);
+  line-height:1.3;
+  letter-spacing:.04em;
+}
+.novelMeta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:0;
+}
+.novelMeta span{
+  display:inline-block;
+  border:1.5px solid var(--navy);
+  border-radius:999px;
+  background:var(--pink-pale);
+  padding:4px 9px;
+  color:var(--navy);
+  font-size:12px;
+  font-weight:850;
+}
+article,
+.novelText{
+  font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif;
+  font-size:17px;
+  line-height:2.05;
+  letter-spacing:.03em;
+}
+.novelText{
+  white-space:pre-wrap;
+}
+article p{ margin:0 0 1.2em; }
+.novelPager{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:28px;
+}
+
+/* 旧HTML互換 */
+.card{
+  position:relative;
+  z-index:1;
+  background:rgba(255,255,255,.82);
+  border:2px solid var(--navy);
+  border-radius:26px;
+  padding:20px;
+  box-shadow:var(--shadow);
+  margin-top:18px;
+}
+.card article{
+  max-width:46em;
+  margin:0 auto;
+}
+.card article h1{
+  color:var(--navy);
+}
+.note{
+  color:var(--muted);
+  font-size:13px;
+  font-weight:700;
+}
+
+.foot{
+  text-align:center;
+  margin:28px 0 0;
+  color:rgba(8,42,77,.55);
+  font-size:12px;
+  font-weight:850;
+  letter-spacing:.08em;
+}
+
+@media (min-width:900px){
+  .bookRow figure{ width:210px; }
+}
+@media (max-width:760px){
+  .heroInner{ grid-template-columns:1fr; }
+  .homeHero{ min-height:auto; }
+  .logo{ margin-top:80px; }
+  .menuGrid{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .sectionHead{ align-items:flex-start; flex-direction:column; }
+  .aboutLead,.infoGrid,.genreGrid{ grid-template-columns:1fr; }
+  .roundMark{ display:none; }
+}
+@media (max-width:420px){
+  .stage{ padding-left:12px; padding-right:12px; }
+  .menuGrid{ grid-template-columns:1fr; }
+  .logo{ font-size:42px; }
+  article,.novelText{ font-size:16px; line-height:1.95; }
+}
