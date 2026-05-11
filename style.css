@@ -774,58 +774,64 @@ article p{ margin:0 0 1.2em; }
 }
 
 
-/* ===== TOP decorative motifs：配置調整 ===== */
+/* ===== TOP decorative motifs：見える配置版 ===== */
 
 .heroInner{
-  z-index: 2;
+  position: relative;
+  z-index: 3;
 }
 
 .heroMotif{
-  position:absolute;
-  z-index:1;
-  pointer-events:none;
-  user-select:none;
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  user-select: none;
+  opacity: 1;
+  filter: drop-shadow(3px 4px 0 rgba(8,42,77,.16));
 }
 
+/* リボン：左下でしっかり見せる */
 .heroMotifRibbon{
-  width:78px;
-  left:7%;
-  bottom:12%;
-  transform:rotate(-10deg);
+  width: 120px;
+  left: 6%;
+  bottom: 12%;
+  transform: rotate(-10deg);
 }
 
+/* ハート：ロゴとメニューの間の空間に置く */
 .heroMotifHeart{
-  width:46px;
-  right:7%;
-  top:16%;
-  transform:rotate(12deg);
+  width: 82px;
+  left: 43%;
+  top: 18%;
+  transform: rotate(12deg);
 }
 
+/* チェリー：中央下、タグの右側あたりに置く */
 .heroMotifCherry{
-  width:72px;
-  right:12%;
-  bottom:14%;
-  transform:rotate(8deg);
-  opacity:.95;
+  width: 110px;
+  left: 44%;
+  bottom: 13%;
+  transform: rotate(8deg);
 }
 
 @media (max-width:760px){
   .heroMotifRibbon{
-    width:58px;
-    left:5%;
-    bottom:8%;
+    width: 78px;
+    left: 5%;
+    bottom: 9%;
   }
 
   .heroMotifHeart{
-    width:36px;
-    right:7%;
-    top:12%;
+    width: 56px;
+    left: 10%;
+    top: 18%;
   }
 
   .heroMotifCherry{
-    width:54px;
-    right:8%;
-    bottom:8%;
+    width: 70px;
+    right: 7%;
+    bottom: 8%;
+    left: auto;
   }
 }
 
