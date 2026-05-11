@@ -854,6 +854,83 @@ article p{ margin:0 0 1.2em; }
 }
 
 
+/* ===== mobile hero decoration boost ===== */
+
+.heroMotifFlower,
+.heroMotifFlower2{
+  position:absolute;
+  z-index:4;
+  pointer-events:none;
+  user-select:none;
+  display:block;
+  background:rgba(255,255,255,.72);
+  border:2px solid var(--navy);
+  border-radius:18px;
+  padding:6px;
+  box-shadow:4px 4px 0 rgba(8,42,77,.16);
+}
+
+/* PCでは控えめに隠す */
+.heroMotifFlower,
+.heroMotifFlower2{
+  display:none;
+}
+
+@media (max-width:760px){
+
+  .homeHero{
+    padding-top:44px;
+  }
+
+  .heroInner{
+    z-index:3;
+  }
+
+  /* 既存モチーフをスマホ用に再配置 */
+  .heroMotifRibbon{
+    width:82px;
+    left:8%;
+    top:33%;
+    bottom:auto;
+    transform:rotate(-10deg);
+  }
+
+  .heroMotifHeart{
+    width:68px;
+    right:9%;
+    top:16%;
+    transform:rotate(12deg);
+  }
+
+  .heroMotifCherry{
+    width:76px;
+    right:8%;
+    top:40%;
+    bottom:auto;
+    left:auto;
+    transform:rotate(8deg);
+  }
+
+  /* 追加モチーフ */
+  .heroMotifFlower{
+    display:block;
+    width:62px;
+    left:10%;
+    top:18%;
+    transform:rotate(-8deg);
+  }
+
+  .heroMotifFlower2{
+    display:block;
+    width:66px;
+    right:10%;
+    top:55%;
+    transform:rotate(9deg);
+  }
+}
+
+
+
 /* ===== section title motifs ===== */
 
 .titleMotif{
