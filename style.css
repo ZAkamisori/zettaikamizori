@@ -867,3 +867,77 @@ article p{ margin:0 0 1.2em; }
     background:rgba(255,240,246,.35);
   }
 }
+
+
+/* ===== ABOUT visual ===== */
+
+.roundMark{
+  display:none;
+}
+
+.aboutVisual{
+  position:relative;
+  width:180px;
+  height:180px;
+  margin-inline:auto;
+}
+
+.aboutSticker{
+  position:absolute;
+  display:block;
+  width:78px;
+  height:auto;
+  background:rgba(255,255,255,.72);
+  border:2px solid var(--navy);
+  border-radius:18px;
+  padding:6px;
+  box-shadow:4px 4px 0 rgba(8,42,77,.16);
+}
+
+.aboutStickerRibbon{
+  left:8px;
+  top:72px;
+  transform:rotate(-8deg);
+}
+
+.aboutStickerFlower{
+  right:10px;
+  top:18px;
+  transform:rotate(8deg);
+}
+
+.aboutStickerHeart{
+  right:18px;
+  bottom:14px;
+  transform:rotate(-6deg);
+}
+
+@media (max-width:760px){
+  .aboutVisual{
+    width:140px;
+    height:120px;
+    margin-top:18px;
+  }
+
+  .aboutSticker{
+    width:60px;
+    padding:5px;
+    border-radius:16px;
+  }
+
+  .aboutStickerRibbon{
+    left:0;
+    top:46px;
+  }
+
+  .aboutStickerFlower{
+    right:6px;
+    top:0;
+  }
+
+  .aboutStickerHeart{
+    right:20px;
+    bottom:2px;
+  }
+}
+
