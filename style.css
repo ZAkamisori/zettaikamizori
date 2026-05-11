@@ -708,227 +708,68 @@ article p{ margin:0 0 1.2em; }
 }
 
 
-
-/* ===== TOP decorative motifs：ステッカー配置版 ===== */
-
-.heroInner{
-  position: relative;
-  z-index: 2;
-}
-
-.heroMotif{
-  position: absolute;
-  z-index: 4;
-  pointer-events: none;
-  user-select: none;
-  display: block;
-  background: rgba(255,255,255,.72);
-  border: 2px solid var(--navy);
-  border-radius: 18px;
-  padding: 6px;
-  box-shadow: 4px 4px 0 rgba(8,42,77,.16);
-}
-
-/* リボン：ロゴ左下、今より少し上 */
-.heroMotifRibbon{
-  width: 96px;
-  left: 7%;
-  bottom: 18%;
-  transform: rotate(-8deg);
-}
-
-/* ハート：ロゴ右上、メニューには被せない */
-.heroMotifHeart{
-  width: 70px;
-  left: 43%;
-  top: 24%;
-  transform: rotate(10deg);
-}
-
-/* チェリー：fanfiction archive の右側 */
-.heroMotifCherry{
-  width: 82px;
-  left: 42%;
-  bottom: 21%;
-  transform: rotate(7deg);
-}
-
-@media (max-width:760px){
-  .heroMotifRibbon{
-    width: 70px;
-    left: 6%;
-    bottom: 14%;
-  }
-
-  .heroMotifHeart{
-    width: 54px;
-    left: 10%;
-    top: 22%;
-  }
-
-  .heroMotifCherry{
-    width: 60px;
-    right: 6%;
-    bottom: 10%;
-    left: auto;
-  }
-}
-
-
 /* ===== main logo image ===== */
 
 .logo{
-  margin: 24px 0 10px;
-  transform: none;
-  text-shadow: none;
-  -webkit-text-stroke: 0;
+  margin:24px 0 10px;
+  transform:none;
+  text-shadow:none;
+  -webkit-text-stroke:0;
+  line-height:1;
 }
 
 .siteLogo{
-  display: block;
-  width: min(500px, 90%);
-  height: auto;
-  margin: 0 auto;
+  display:block;
+  width:min(500px, 90%);
+  height:auto;
+  margin:0 auto;
 }
 
 
-/* ===== TOP decorative motifs：見える配置版 ===== */
+/* ===== TOP decorative motifs：整理版 ===== */
 
 .heroInner{
-  position: relative;
-  z-index: 3;
+  position:relative;
+  z-index:3;
 }
 
 .heroMotif{
-  position: absolute;
-  z-index: 2;
-  pointer-events: none;
-  user-select: none;
-  opacity: 1;
-  filter: drop-shadow(3px 4px 0 rgba(8,42,77,.16));
-}
-
-/* リボン：左下でしっかり見せる */
-.heroMotifRibbon{
-  width: 120px;
-  left: 6%;
-  bottom: 12%;
-  transform: rotate(-10deg);
-}
-
-/* ハート：ロゴとメニューの間の空間に置く */
-.heroMotifHeart{
-  width: 82px;
-  left: 43%;
-  top: 18%;
-  transform: rotate(12deg);
-}
-
-/* チェリー：中央下、タグの右側あたりに置く */
-.heroMotifCherry{
-  width: 110px;
-  left: 44%;
-  bottom: 13%;
-  transform: rotate(8deg);
-}
-
-@media (max-width:760px){
-  .heroMotifRibbon{
-    width: 78px;
-    left: 5%;
-    bottom: 9%;
-  }
-
-  .heroMotifHeart{
-    width: 56px;
-    left: 10%;
-    top: 18%;
-  }
-
-  .heroMotifCherry{
-    width: 70px;
-    right: 7%;
-    bottom: 8%;
-    left: auto;
-  }
-}
-
-
-/* ===== mobile hero decoration boost ===== */
-
-.heroMotifFlower,
-.heroMotifFlower2{
   position:absolute;
-  z-index:4;
+  z-index:2;
   pointer-events:none;
   user-select:none;
   display:block;
-  background:rgba(255,255,255,.72);
-  border:2px solid var(--navy);
-  border-radius:18px;
-  padding:6px;
-  box-shadow:4px 4px 0 rgba(8,42,77,.16);
+  opacity:1;
+  filter:drop-shadow(3px 4px 0 rgba(8,42,77,.16));
 }
 
-/* PCでは控えめに隠す */
+/* PC：背景装飾として控えめに配置 */
+.heroMotifRibbon{
+  width:120px;
+  left:6%;
+  bottom:12%;
+  transform:rotate(-10deg);
+}
+
+.heroMotifHeart{
+  width:82px;
+  left:43%;
+  top:18%;
+  transform:rotate(12deg);
+}
+
+.heroMotifCherry{
+  width:110px;
+  left:44%;
+  bottom:13%;
+  transform:rotate(8deg);
+}
+
+/* 追加モチーフ：PCでは非表示 */
 .heroMotifFlower,
 .heroMotifFlower2{
   display:none;
 }
-
-@media (max-width:760px){
-
-  .homeHero{
-    padding-top:44px;
-  }
-
-  .heroInner{
-    z-index:3;
-  }
-
-  /* 既存モチーフをスマホ用に再配置 */
-  .heroMotifRibbon{
-    width:82px;
-    left:8%;
-    top:33%;
-    bottom:auto;
-    transform:rotate(-10deg);
-  }
-
-  .heroMotifHeart{
-    width:68px;
-    right:9%;
-    top:16%;
-    transform:rotate(12deg);
-  }
-
-  .heroMotifCherry{
-    width:76px;
-    right:8%;
-    top:40%;
-    bottom:auto;
-    left:auto;
-    transform:rotate(8deg);
-  }
-
-  /* 追加モチーフ */
-  .heroMotifFlower{
-    display:block;
-    width:62px;
-    left:10%;
-    top:18%;
-    transform:rotate(-8deg);
-  }
-
-  .heroMotifFlower2{
-    display:block;
-    width:66px;
-    right:10%;
-    top:55%;
-    transform:rotate(9deg);
-  }
-}
-
 
 
 /* ===== section title motifs ===== */
@@ -942,9 +783,88 @@ article p{ margin:0 0 1.2em; }
   transform:translateY(-2px);
 }
 
-/* ===== mobile menu card decoration ===== */
+
+/* ===== mobile hero decoration boost ===== */
 
 @media (max-width:760px){
+
+  .homeHero{
+    padding-top:44px;
+  }
+
+  .heroInner{
+    z-index:3;
+  }
+
+  .heroMotif{
+    z-index:4;
+    background:rgba(255,255,255,.72);
+    border:2px solid var(--navy);
+    border-radius:18px;
+    padding:6px;
+    box-shadow:4px 4px 0 rgba(8,42,77,.16);
+    filter:none;
+  }
+
+  .heroMotifRibbon{
+    width:82px;
+    left:8%;
+    top:33%;
+    bottom:auto;
+    transform:rotate(-10deg);
+  }
+
+  .heroMotifHeart{
+    width:68px;
+    right:9%;
+    left:auto;
+    top:16%;
+    transform:rotate(12deg);
+  }
+
+  .heroMotifCherry{
+    width:76px;
+    right:8%;
+    left:auto;
+    top:40%;
+    bottom:auto;
+    transform:rotate(8deg);
+  }
+
+  .heroMotifFlower{
+    display:block;
+    position:absolute;
+    z-index:4;
+    width:62px;
+    left:10%;
+    top:18%;
+    transform:rotate(-8deg);
+    pointer-events:none;
+    user-select:none;
+    background:rgba(255,255,255,.72);
+    border:2px solid var(--navy);
+    border-radius:18px;
+    padding:6px;
+    box-shadow:4px 4px 0 rgba(8,42,77,.16);
+  }
+
+  .heroMotifFlower2{
+    display:block;
+    position:absolute;
+    z-index:4;
+    width:66px;
+    right:10%;
+    top:55%;
+    transform:rotate(9deg);
+    pointer-events:none;
+    user-select:none;
+    background:rgba(255,255,255,.72);
+    border:2px solid var(--navy);
+    border-radius:18px;
+    padding:6px;
+    box-shadow:4px 4px 0 rgba(8,42,77,.16);
+  }
+
   .menuCard{
     position:relative;
     overflow:hidden;
@@ -970,4 +890,3 @@ article p{ margin:0 0 1.2em; }
     background:rgba(255,240,246,.35);
   }
 }
-
