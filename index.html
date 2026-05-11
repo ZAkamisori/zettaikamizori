@@ -10,82 +10,115 @@
 
 <body class="home">
   <main class="stage">
+    <header class="homeHero">
+      <div class="dotField" aria-hidden="true"></div>
+      <div class="heroInner">
+        <div class="logoBlock">
+          <h1 class="logo">絶対安全剃刀</h1>
+          <p class="tag">fanfiction archive</p>
+        </div>
 
-    <header class="hero">
-      <!-- トップ画像（蛾） -->
-      <img src="top_ga.png" alt="" class="hero-visual">
-
-      <h1 class="logo">絶対安全剃刀</h1>
-      <p class="tag">小説置き場</p>
+        <nav class="menuGrid" aria-label="メニュー">
+          <a class="menuCard" href="about.html">
+            <span><span class="icon">ⓘ</span>ABOUT</span>
+          </a>
+          <a class="menuCard" href="novels.html">
+            <span><span class="icon">▤</span>NOVELS</span>
+          </a>
+          <a class="menuCard" href="binding.html">
+            <span><span class="icon">▧</span>GALLERY</span>
+          </a>
+          <a class="menuCard" href="https://zakamisori.github.io/dontmix/index.html" target="_blank" rel="noopener noreferrer">
+            <span><span class="icon">↗</span>CIRCLE</span>
+          </a>
+        </nav>
+      </div>
     </header>
 
-    <!-- 丸ボタン（画像） -->
-  <nav class="bubbleNav" aria-label="メニュー">
-  <a class="bubble" href="#works" aria-label="作品一覧">
-    <img src="icon_novel.png" alt="novel">
-  </a>
-
-  <a class="bubble" href="binding.html" aria-label="装丁ギャラリー">
-    <img src="gallery.png" alt="gallery">
-  </a>
-
-  <a class="bubble" href="about.html" aria-label="注意書き">
-    <img src="icon_about.png" alt="about">
-  </a>
-
-  <a class="bubble" href="https://zakamisori.github.io/dontmix/index.html" aria-label="Tumblr">
-    <img src="icon_Tumblr.png" alt="Tumblr">
-  </a>
-</nav>
-
-    <!-- 作品一覧 -->
-    <section class="card" id="works">
-       <p class="note">※18歳未満は閲覧をご遠慮ください。</p>
-      <p></p>
-      <h2>小説ごちゃまぜ</h2>
-      <p></p>
-     <ul class="works">
-<li>
-  <span class="meta">gcakt（tamvus）</span>
-  <a class="title" href="novel7.html">A Man Beyond Price</a>
-</li>
-       
-<li>
-  <span class="meta">呪術（五七）</span>
-  <a class="title" href="novel1.html">Boudoir Rose</a>
-</li>
-
-<li>
-  <span class="meta">dcst（ゼノスタ）</span>
-  <a class="title" href="novel2.html">スタンが産卵する話</a>
-</li>
-
-<li>
-  <span class="meta">12国.記.（驍泰）</span>
-  <a class="title" href="novel3.html">翼覆嫗煦</a>
-</li>
-
-<li>
-  <span class="meta">12国.記.（驍泰）</span>
-  <a class="title" href="novel4.html">You are the apple of my eye</a>
-</li>
-
-<li>
-  <span class="meta">APH（普独）</span>
-  <a class="title" href="novel5.html">Mein lieber Geist</a>
-</li>
-
-<li>
-  <span class="meta">落乱（雑照）</span>
-  <a class="title" href="novel6.html">卒都婆小町</a>
-</li>
-       
-</ul>
-
-
+    <section class="section" id="about">
+      <div class="sectionHead">
+        <h2 class="sectionTitle">ABOUT</h2>
+        <p class="caption">二次創作小説を掲載する個人サイトです。</p>
+      </div>
+      <div class="aboutLead">
+        <div>
+          <p class="leadText">
+            各作品の権利元とは一切関係ありません。<br>
+            18歳未満の方は閲覧をご遠慮ください。<br>
+            過去に配布した同人誌の再録や、装丁画像の保管もしています。
+          </p>
+          <div class="homeLinkRow">
+            <a class="button primary" href="about.html">aboutを読む</a>
+            <a class="button" href="novels.html">作品一覧へ</a>
+          </div>
+        </div>
+        <div class="roundMark" aria-hidden="true"></div>
+      </div>
     </section>
 
-    <footer class="foot">©絶対安全剃刀</footer>
+    <section class="section" id="novels">
+      <div class="sectionHead">
+        <h2 class="sectionTitle">NOVELS</h2>
+        <p class="caption">ジャンル別の作品一覧です。</p>
+      </div>
+
+      <nav class="genreNav" aria-label="ジャンル">
+        <a href="novels.html#gcakt">gcakt</a>
+        <a href="novels.html#jujutsu">呪術</a>
+        <a href="novels.html#dcst">dcst</a>
+        <a href="novels.html#12k">12国.記.</a>
+        <a href="novels.html#aph">APH</a>
+        <a href="novels.html#rakuran">落乱</a>
+      </nav>
+
+      <div class="genreGrid">
+        <article class="genreCard" id="gcakt">
+          <h3 class="genreTitle">gcakt <span>tamvus</span></h3>
+          <ul class="works">
+            <li><span class="num">001</span><span><a class="title" href="novel7.html">A Man Beyond Price</a><span class="meta">tamvus / novel</span></span></li>
+          </ul>
+        </article>
+
+        <article class="genreCard" id="jujutsu">
+          <h3 class="genreTitle">呪術 <span>五七</span></h3>
+          <ul class="works">
+            <li><span class="num">001</span><span><a class="title" href="novel1.html">Boudoir Rose</a><span class="meta">五七 / novel</span></span></li>
+          </ul>
+        </article>
+
+        <article class="genreCard" id="dcst">
+          <h3 class="genreTitle">dcst <span>ゼノスタ</span></h3>
+          <ul class="works">
+            <li><span class="num">001</span><span><a class="title" href="novel2.html">スタンが産卵する話</a><span class="meta">ゼノスタ / novel</span></span></li>
+          </ul>
+        </article>
+
+        <article class="genreCard" id="12k">
+          <h3 class="genreTitle">12国.記. <span>驍泰</span></h3>
+          <ul class="works">
+            <li><span class="num">001</span><span><a class="title" href="novel3.html">翼覆嫗煦</a><span class="meta">驍泰 / novel</span></span></li>
+            <li><span class="num">002</span><span><a class="title" href="novel4.html">You are the apple of my eye</a><span class="meta">驍泰 / novel</span></span></li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="homeLinkRow">
+        <a class="button pink" href="novels.html">全ての作品を見る</a>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="sectionHead">
+        <h2 class="sectionTitle">GALLERY</h2>
+        <p class="caption">過去に出した同人誌の表紙・装丁画像をまとめています。</p>
+      </div>
+      <div class="homeLinkRow">
+        <a class="button primary" href="binding.html">装丁ギャラリーへ</a>
+        <a class="button" href="https://zakamisori.github.io/dontmix/index.html" target="_blank" rel="noopener noreferrer">混ぜるな危険 ↗</a>
+      </div>
+    </section>
+
+    <footer class="foot">© 絶対安全剃刀</footer>
   </main>
 </body>
 </html>
