@@ -972,7 +972,7 @@ article p{ margin:0 0 1.2em; }
 }
 
 .menuCard:nth-child(4){
-  background:var(--yellow-soft);
+  background:#FFF2C9;
   color:var(--navy);
 }
 
