@@ -806,38 +806,37 @@ article p{ margin:0 0 1.2em; }
     filter:none;
   }
 
-  /* 花：ロゴ左下 */
-  .heroMotifFlower{
-    display:block;
-    position:absolute;
-    width:54px;
-    left:10%;
-    top:31%;
-    transform:rotate(-8deg);
-  }
+/* 花：ロゴ左下 */
+.heroMotifFlower{
+  display:block;
+  position:absolute;
+  width:54px;
+  left:10%;
+  top:31%;
+  transform:rotate(-8deg);
+}
 
-  /* ハート：ロゴ右下 */
-  .heroMotifHeart{
-    display:block;
-    position:absolute;
-    width:58px;
-    right:10%;
-    top:31%;
-    left:auto;
-    transform:rotate(10deg);
-  }
+/* キャンディ（今の右上の素材）：ロゴ右下 */
+.heroMotifHeart{
+  display:block;
+  position:absolute;
+  width:54px;
+  right:10%;
+  top:31%;
+  left:auto;
+  transform:rotate(8deg);
+}
 
-  /* リボン：タグ左下 */
-  .heroMotifRibbon{
-    display:block;
-    position:absolute;
-    width:66px;
-    left:12%;
-    top:43%;
-    bottom:auto;
-    transform:rotate(-8deg);
-  }
-
+/* リボン：タグ左下 */
+.heroMotifRibbon{
+  display:block;
+  position:absolute;
+  width:62px;
+  left:12%;
+  top:43%;
+  bottom:auto;
+  transform:rotate(-8deg);
+}
   /* 使わない素材は非表示 */
   .heroMotifCherry,
   .heroMotifFlower2{
