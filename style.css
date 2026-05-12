@@ -1200,3 +1200,29 @@ body{
   background:#f8c5dc;
   color:#35385f;
 }
+
+
+
+/* ===== about page small icons ===== */
+
+.noteCard h2{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.noteIcon{
+  width:24px;
+  height:24px;
+  object-fit:contain;
+  flex:0 0 auto;
+}
+
+/* aboutページだけ少し柔らかく */
+.aboutPage .noteCard{
+  background:rgba(255,253,248,.88);
+}
+
+.aboutPage .noteCard:nth-child(2){
+  background:rgba(255,241,247,.82);
+}
