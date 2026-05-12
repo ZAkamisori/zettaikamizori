@@ -1263,3 +1263,41 @@ body{
   transform:translateY(-3px);
   box-shadow:7px 7px 0 rgba(117,122,190,.18);
 }
+
+/* ===== novels page details ===== */
+
+.novelsPageSection .genreCard{
+  isolation:isolate;
+}
+
+.novelsPageSection .genreCard::before{
+  content:"";
+  position:absolute;
+  left:16px;
+  top:-10px;
+  width:34px;
+  height:18px;
+  border:2px solid var(--navy);
+  border-radius:999px;
+  background:var(--pink-soft);
+  transform:rotate(-8deg);
+  z-index:0;
+}
+
+.novelsPageSection .genreCard:nth-child(2n)::before{
+  background:var(--pink-pale);
+}
+
+.novelsPageSection .genreCard:nth-child(3n)::before{
+  background:#eceeff;
+}
+
+.novelsPageSection .genreCard:nth-child(4n)::before{
+  background:#f8c5dc;
+}
+
+.novelsPageSection .genreTitle,
+.novelsPageSection .works{
+  position:relative;
+  z-index:1;
+}
